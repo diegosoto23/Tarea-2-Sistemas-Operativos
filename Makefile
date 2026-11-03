@@ -1,10 +1,9 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c17
-LDLIBS = -lpthread
+CFLAGS = -Wall -Wextra -std=c17 -pthread
 FUENTES = $(wildcard src/*.c)
 
 torneo: $(FUENTES) $(wildcard src/*.h)
-	$(CC) $(CFLAGS) -o torneo $(FUENTES) $(LDLIBS)
+	$(CC) $(CFLAGS) -o torneo $(FUENTES)
 
 test_tablero: tests/test_tablero.c src/tablero.c src/tablero.h
 	$(CC) $(CFLAGS) -Isrc -o test_tablero tests/test_tablero.c src/tablero.c
