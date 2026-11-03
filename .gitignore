@@ -1,4 +1,5 @@
 torneo
 torneo.exe
 *.o
-*.log
+*.logtorneo
+test_tablero
